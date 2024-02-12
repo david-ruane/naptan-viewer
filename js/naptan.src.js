@@ -33,7 +33,7 @@ var stopmarkers = L.markerClusterGroup({ MaxClusterRadius: 200, disableClusterin
     osm = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
         maxZoom: 20,
         attribution: '&copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap contributors</a>'
-      }).addTo(map);
+      });
       
     map = L.map("map", { center: [53.43, -7.95], zoom: 7, layers: [osm, stopmarkers] });
 $.getJSON("js/naptan.json", function (o) {
