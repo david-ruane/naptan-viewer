@@ -15,7 +15,7 @@ function getColor(o) {
         ? colors[5]
         : "PLT" == o.StopType
         ? colors[6]
-        : "FTD" == o.StopType
+        : "FER" == o.StopType
         ? colors[7]
         : "ffffff";
 }
