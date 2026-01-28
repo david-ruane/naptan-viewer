@@ -32,7 +32,7 @@ var stopmarkers = L.markerClusterGroup({ MaxClusterRadius: 200, disableClusterin
     baseMaps = { OpenStreetMap: osm },
     osm = L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", { maxZoom: 20, attribution: '&copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap contributors</a>' });
 (map = L.map("map", { center: [53.43, -7.95], zoom: 7, layers: [osm, stopmarkers] })),
-    $.getJSON("https://corsproxy.io/?url=https://www.transportforireland.ie/transitData/Data/NaPTAN.geojson", function (o) {
+    $.getJSON("js/NaPTAN.geojson", function (o) {
         (napLocations = L.geoJSON(o, {
             onEachFeature: forEachFeature,
             pointToLayer: function (o, e) {
@@ -63,4 +63,5 @@ var legend = L.control({ position: "bottomright" });
     return e;
 }),
     legend.addTo(map);
+
 
